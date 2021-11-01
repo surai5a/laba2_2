@@ -7,6 +7,7 @@ def biqual(a: float,
            c: float):
     if a == 0:
         print("Wrong number!", file=sys.stderr)
+        exit(0)
 
     d = math.pow(b, 2) - (4 * a * c)
     if d < 0:
@@ -25,6 +26,10 @@ def biqual(a: float,
             print("no roots")
             exit(0)
         if y1 >= 0 and y2 >= 0:
+            x1 = math.sqrt(y1)
+            x2 = -(math.sqrt(y1))
+            x3 = math.sqrt(y2)
+            x4 = -(math.sqrt(y2))
             print(f"x1 = {x1}\nx2 = {x2}\nx3 = {x3}\nx4 = {x4}")
         elif y1 >=0:
             print(f"x1 = {x1}\nx2 = {x2}")
