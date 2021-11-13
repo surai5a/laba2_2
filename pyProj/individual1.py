@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 
 
-def month(m):
-    import sys
-    if m > 12 or m < 1:
+import sys
+
+
+def season(mon):
+    if mon > 4 or mon < 1:
         print("Wrong number!", file=sys.stderr)
         exit(1)
-    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    for i in months:
-        if months.index(i) == (m - 1):
-            print('Month is', i)
+    months = [
+        {1: 'Winter: Dec Jan Feb'},
+        {2: 'Spring: Mar Apr May'},
+        {3: 'Summer: Jun Jul Avg'},
+        {4: 'Fall: Sep Oct Nov'}
+    ]
+    print(months[mon - 1])
 
 
-m = int(input('Input number of month: '))
-month(m)
+m = int(input('Input number of season(season 1 is winter): '))
+season(m)
