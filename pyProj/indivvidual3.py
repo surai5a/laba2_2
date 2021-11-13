@@ -1,13 +1,25 @@
-import math
 import sys
+import math
 
 
-def harsh():
-    num = [10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42, 45, 48, 50, 54,
-           60, 63, 70, 72, 80, 81, 84, 90]
-    for i in num:
-        print(i, end=' ')
+def simple(k):
+    flag = 1
+    i = 2
+    cnt = 0
+    while i <= math.sqrt(k):
+        if k % i == 0:
+            flag = 0
+            break
+        i += 1
+    if flag == 1:
+        print(1)
+    else:
+        print(0)
 
 
-print('All 2-char numbers of Harsh Numbers: ')
-harsh()
+k = int(input("Put number: "))
+if k < 2:
+    print("Wrong number", file=sys.stderr)
+    exit(1)
+simple(k)
+
