@@ -1,9 +1,11 @@
-import math
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import sys
 
 
 def triangle(a, b, c):
-    if a + b < c or b + c < a or a + c < b:
+    if a + b <= c or b + c <= a or a + c <= b:
         print("Triangle cannot be built", file=sys.stderr)
         exit(1)
     if (a == b or a == c or b == c) and not (a == b == c):
@@ -14,6 +16,10 @@ def triangle(a, b, c):
         print("Triangle is versatile")
 
 
-a, b, c = (c for c in input("Put a b c: ") if c != ' ')
-triangle(a, b, c)
+if __name__ == '__main__':
+    print("Put 3 nums: ")
+    a = int(input())
+    b = int(input())
+    c = int(input())
+    triangle(a, b, c)
 

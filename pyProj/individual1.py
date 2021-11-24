@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import sys
 
 
@@ -14,5 +17,6 @@ def season(mon):
     print(months[mon - 1])
 
 
-m = int(input('Input number of season(season 1 is winter): '))
-season(m)
+if __name__ == '__main__':
+    m = int(input('Input number of season(season 1 is winter): '))
+    season(m)
