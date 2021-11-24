@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import sys
 import math
 
@@ -17,9 +20,10 @@ def simple(k):
         print(0)
 
 
-k = int(input("Put number: "))
-if k < 2:
-    print("Wrong number", file=sys.stderr)
-    exit(1)
-simple(k)
+if __name__ == '__main__':
+    k = int(input("Put number: "))
+    if k < 2:
+        print("Wrong number", file=sys.stderr)
+        exit(1)
+    simple(k)
 
