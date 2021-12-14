@@ -5,7 +5,11 @@ import sys
 import math
 
 
-def simple(k):
+if __name__ == '__main__':
+    k = int(input("Put number: "))
+    if k < 2:
+        print("Wrong number", file=sys.stderr)
+        exit(1)
     flag = 1
     i = 2
     cnt = 0
@@ -18,12 +22,4 @@ def simple(k):
         print(1)
     else:
         print(0)
-
-
-if __name__ == '__main__':
-    k = int(input("Put number: "))
-    if k < 2:
-        print("Wrong number", file=sys.stderr)
-        exit(1)
-    simple(k)
 
